@@ -1,0 +1,105 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 65%;
+}
+
+body {
+	align-items: center;
+	background-color: #e4f2fb;
+	color: #333;
+	display: flex;
+	font-size: 1.5rem;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.card {
+	background-color: #eff4f8;
+	box-shadow: 0 1px 5px black;
+}
+
+.card__publication {
+	position: relative;
+	overflow: hidden;
+	position: relative;
+}
+
+.card__publication img {
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	transition: transform 0.5s;
+	width: 100%;
+}
+
+.card:hover .card__publication img {
+	transform: scale(1.5);
+}
+
+.card__publication div {
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 119, 48, 0.8),
+		rgba(255, 185, 0, 0.8)
+	);
+	color: #fff;
+	font-size: 1.4rem;
+	font-weight: bold;
+	inset: 0;
+	padding: 1rem;
+}
+
+.card__publication span {
+	display: block;
+}
+
+.card__author {
+	margin-bottom: 5rem;
+}
+
+.card__info {
+	padding: 2rem 3rem;
+	position: relative;
+}
+
+.card__title {
+	font-size: 3rem;
+}
+
+.card__subtitle {
+	color: gray;
+	display: inline-block;
+	font-size: 1.4rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.card__desc {
+	margin: 1.5rem 0;
+}
+
+.card__cta {
+	color: orange;
+	font-weight: bold;
+	text-decoration: none;
+	position: relative;
+}
+
+@media screen and (min-width: 600px) {
+	.card {
+		display: grid;
+		grid-auto-flow: column;
+		max-width: 1000px;
+	}
+
+	.card__publication {
+		width: 400px;
+		height: initial;
+	}
+}
